@@ -38,3 +38,29 @@ for(var i = 0; i < charactersLength; i++) {
 return password;
 }
 
+function getPrompts() {
+
+  charactersLength = (prompt(" How many characters do you want your password to be? (8 - 128 characters"));
+
+  if (isNaN(charactersLength)  || charactersLength < 8 || charactersLength > 128) {
+    alert("characters length has to be a number, 8 - 128 dights. Please try again.");
+    return false;
+  }
+
+  if (confirm("would you like lowercase letters in your password")) {
+    array = array.concat(lowerCaseArray);
+  }
+
+  if (confirm("would you like uppercase letters in your password")) {
+    array = array.concat(upperCaseArray);
+  }
+
+  if (confirm("would you like numbers in your password")) {
+    array = array.concat(numberArray);
+  }
+
+  if (confirm("would you like special characters in your password")) {
+    array = array.concat(specialCharacterArray);
+  }
+  return true;
+}
