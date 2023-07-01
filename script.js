@@ -28,3 +28,13 @@ function writePassword() {
  
 }
 
+function generatePassword() {
+  // I would generatePassword based on Prompts
+var password = " ";
+for(var i = 0; i < charactersLength; i++) {
+  var randomIndex = Math.floor(Math.random() * array.length);
+  password = password + array[randomIndex];
+}
+return password;
+}
+
