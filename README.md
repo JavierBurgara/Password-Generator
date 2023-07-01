@@ -17,4 +17,4 @@ Please refer to License in the repo
 # Link to Website
 https://javierburgara.github.io/Password-Generator/
 # Deployed Running Website
-
+![password](https://github.com/JavierBurgara/Password-Generator/assets/135621096/df6431a8-1b1b-492c-9c5b-8a9a42927894)
