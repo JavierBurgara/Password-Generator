@@ -8,14 +8,23 @@ var numberArray =['1','2','3','4','5','6','7','8','9','0',];
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Write password to the #password input
+function writePassword() {
+  var correctPrompts = getPrompts(); ///returns true or false password
+  var passwordText = document.querySelector("#password");
+  
+  
+  if(correctPrompts) {
+    var newPassword = generatePassword();
+    passwordText.value = newPassword;
+  
+  } else {
+    passwordText.value = "";
+
+  }
+ 
+}
+
