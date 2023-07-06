@@ -1,5 +1,5 @@
 // Assignment code here
-var charactersLength = 8;
+var charactersLength ;
 var array = [];
 var specialCharacterArray = ['!','@','#','$','%','^','&','*','(',')','_','+','-','=', ',','<','.','>','/','?',';',':','[',']','{','}',];
 var lowerCaseArray = ['a','z','q','w','s','x','e','d','c','r','f','v','t','g','b','y','h','n','u','j','m','i','k','o','l','p',];
@@ -20,12 +20,14 @@ function writePassword() {
   if(correctPrompts) {
     var newPassword = generatePassword();
     passwordText.value = newPassword;
+    array = []
   
   } else {
     passwordText.value = "";
-
+    
   }
- 
+  array = [];
+  charactersLength = null;
 }
 
 function generatePassword() {
@@ -49,18 +51,22 @@ function getPrompts() {
 
   if (confirm("would you like lowercase letters in your password")) {
     array = array.concat(lowerCaseArray);
+    console.log("lowerCasearray  concat.array: "+ array);
   }
 
   if (confirm("would you like uppercase letters in your password")) {
     array = array.concat(upperCaseArray);
+    console.log("upperCasearray  concat.array: "+ array);
   }
 
   if (confirm("would you like numbers in your password")) {
     array = array.concat(numberArray);
+    console.log("numberarray  concat.array: "+ array);
   }
 
   if (confirm("would you like special characters in your password")) {
     array = array.concat(specialCharacterArray);
+    console.log("specialCharactersarray  concat.array: "+ array);
   }
   return true;
 }
